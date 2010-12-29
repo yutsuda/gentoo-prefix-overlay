@@ -20,7 +20,7 @@ DEPEND="${RDEPEND}"
 S="${WORKDIR}/node-v${PV}"
 
 src_configure() {
-	./configure --prefix=/usr || die "configure failed"
+	./configure --prefix=${EPREFIX}/usr || die "configure failed"
 }
 
 src_compile() {

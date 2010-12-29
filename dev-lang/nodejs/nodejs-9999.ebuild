@@ -18,7 +18,7 @@ RDEPEND="crypt? ( dev-libs/openssl )
 DEPEND="${RDEPEND}"
 
 src_compile() {
-	./configure --prefix=/usr || die "configure failed"
+	./configure --prefix=${EPREFIX}/usr || die "configure failed"
 	emake || die "emake failed"
 }
 
