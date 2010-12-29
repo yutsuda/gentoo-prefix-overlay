@@ -14,7 +14,8 @@ KEYWORDS="-* ~x86 ~amd64"
 IUSE=""
 
 RDEPEND="crypt? ( dev-libs/openssl )
-	>=sys-devel/gcc-4"
+	|| ( >=sys-devel/gcc-4 >=sys-devel/gcc-apple-4 )"
+
 DEPEND="${RDEPEND}"
 
 src_compile() {
